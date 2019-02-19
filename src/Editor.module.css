@@ -1,0 +1,9 @@
+.tile{
+    box-sizing: border-box;
+}
+.tile:hover{
+    border: 1px solid green;
+}
+.tileOperation:focus{
+    outline: none;
+}

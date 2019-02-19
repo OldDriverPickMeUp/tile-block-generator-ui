@@ -1,25 +1,28 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import TileBar from "./TileBar";
+import Editor from "./Editor";
 
 class App extends Component {
   render() {
+    const styles = {
+      box: { display: "flex" },
+      left: { flex: "1", height: "100vh", maxWidth: "80%" },
+      right: {
+        minWidth: "20%",
+        maxWidth: "40%",
+        borderLeft: "3px solid blue",
+        height: "100vh",
+        overflowY: "auto"
+      }
+    };
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div style={styles.box}>
+        <div style={styles.left}>
+          <Editor />
+        </div>
+        <div style={styles.right}>
+          <TileBar />
+        </div>
       </div>
     );
   }
