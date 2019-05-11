@@ -1,0 +1,6 @@
+public/
+src/
+node_modules/
+.*
+*.json
+*.md

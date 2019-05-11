@@ -1,1 +1,14 @@
-{}
+{
+  "name": "tile-block-generator-ui",
+  "version": 2,
+  "routes": [
+    {
+      "src": "/",
+      "dest": "build/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "build/$1"
+    }
+  ]
+}
